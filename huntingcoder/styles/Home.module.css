@@ -1,10 +1,10 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 6rem;
-  min-height: 100vh;
+  flex: 1;
+  /* min-height: 100vh; */
 }
 
 .description {
@@ -75,6 +75,8 @@
 .center {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  /* gap: 2rem; */
   align-items: center;
   position: relative;
   padding: 4rem 0;
@@ -97,7 +99,7 @@
 
 .center::before,
 .center::after {
-  content: '';
+  content: "";
   left: 50%;
   position: absolute;
   filter: blur(45px);
@@ -226,4 +228,15 @@
   to {
     transform: rotate(0deg);
   }
+}
+
+.mainnav ul {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.mainnav ul li {
+  list-style: none;
+  font-weight: bold;
+  margin: 0 24px;
 }
