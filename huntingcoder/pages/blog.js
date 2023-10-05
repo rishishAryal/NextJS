@@ -1,25 +1,43 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../styles/Blog.module.css";
 import Link from "next/link";
-// step1 : collect all the files from blogData folder
-// step2 : Itraate over the files and create a page for each file
 
 const Blog = () => {
+  const [blogs, setBlogs] = useState([]);
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        const response = await fetch("http://192.168.18.12:3000/api/blogs");
+        const data = await response.json();
+
+        setBlogs(data);
+      } catch (error) {
+        console.error("Failed to fetch blogs:", error);
+      }
+    };
+
+    fetchBlogs();
+  }, []);
+
   return (
     <div>
       <main className={styles.main}>
         <div className="blogs">
           <h2 style={{ fontSize: "38px" }}>Popular Blogs</h2>
-
-          <div className="blogItem">
-            <Link href="/blogpost/learn-javascript"> <h3>How to learn javascript</h3></Link>
-           
-            <p>js is goood language</p>
-          </div>
-
-          <div className="blogItem">
-            <h3>How to learn javascript</h3>
-            <p>js is goood language</p>
+          <div style={{textAlign:"justify"}}>
+            {blogs.map((blog, index) => (
+              <div key={index} className="blogItem">
+              
+                  <p style={{color:"black",textDecoration:"none",fontSize:"2rem"}}>{blog.title}</p>
+               
+               <p>{blog.content.substr(0,100)} ... 
+               <Link style={{textDecoration:"none",fontWeight:"bold"}} href={`/blogpost/${blog.slug}`}>
+                 read more 
+                </Link>
+               </p>
+              </div>
+            ))}
           </div>
         </div>
       </main>

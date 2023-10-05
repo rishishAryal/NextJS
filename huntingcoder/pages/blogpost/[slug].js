@@ -1,30 +1,41 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import styles from "../../styles/BlogPost.module.css";
 
-//find the file corresponding to the slug
-//read the file and get the content
-const slug = () => {
+const BlogPost = () => {
+  const [blog, setBlog] = useState([]);
+  // Destructuring slug from router query
   const router = useRouter();
   const { slug } = router.query;
+  useEffect(() => {
+    const fetchBlog = async () => {
+      try {
+        console.log(slug);
+        const response = await fetch(
+          `http://192.168.18.12:3000/api/getblog?slug=${slug}`
+        );
+        const data = await response.json();
+        console.log(data);
+        setBlog(data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
+    fetchBlog();
+  }, [router.isReady]); 
 
   return (
     <div className={styles.slug}>
-      <h1>
-        Title of the page : {slug} 
-      </h1>
+      <h1>Blog Post</h1>
+      <h1>{blog.title}</h1>
 
       <p className={styles.blogContent}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
+        {blog.content} <br></br>
+        <b style={{marginTop:"10px",display:"inline-block"}}>By {blog.author}</b>
       </p>
     </div>
   );
 };
 
-export default slug;
+export default BlogPost;

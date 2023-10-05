@@ -1,8 +1,9 @@
 .main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
+  text-align: center;
+  width: 60%;
+  padding: 40px;
+  margin: auto;
+ /* background-color: antiquewhite; */
+  /* text-align: justify; */
   /* min-height: 100vh; */
 }
