@@ -37,7 +37,7 @@ export default function Home() {
           
           <span className="myspan dummy">Hunting Coders</span>
           <p>Learn to code by watching others</p>
-          <div className={styles.imagewrap}> <Image className={styles.myImg} src="/home.jpg" width={237} height={158} ></Image></div>
+          <div className={styles.imagewrap}> <Image priority alt="img" className={styles.myImg} src="/home.jpg" width={237} height={158} ></Image></div>
          
         </div>
         <div className="blogs">
