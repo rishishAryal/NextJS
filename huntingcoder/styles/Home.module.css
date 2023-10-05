@@ -240,3 +240,21 @@
   font-weight: bold;
   margin: 0 24px;
 }
+
+/* own css */
+.myImg {
+  border-radius: 10px;
+  
+}
+.imagewrap{
+  padding: 0px;
+}
+.aboutCenter{
+  text-align: center;
+
+}
+.aboutWith{
+  width: 80%;
+  margin: 0 auto;
+  text-align: justify;
+}

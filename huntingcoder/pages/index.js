@@ -1,9 +1,8 @@
 import Head from "next/head";
 import Image from "next/image";
-import Script from "next/script";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
-import Link from "next/link";
+
 // import Dummy from "../components/dummy";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -11,14 +10,17 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   return (
     <>
-   {/* <Dummy/> */}
+      {/* <Dummy/> */}
       <style jsx>
         {`
           .myspan {
             // color: red;
             font-size: 3rem;
             font-weight: bold;
-            
+          },
+
+          
+         
           }
         `}
       </style>
@@ -29,42 +31,17 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <nav className={styles.mainnav}>
-        <ul>
-          <Link href={"/index"}>
-            {" "}
-            <a>
-              <li>Home</li>
-            </a>
-          </Link>
-          <Link href={"/about"}>
-            {" "}
-            <a>
-              <li>about</li>
-            </a>
-          </Link>
-          <Link href={"/blog"}>
-            {" "}
-            <a>
-              <li>blog</li>
-            </a>
-          </Link>
-          <Link href={"/contact"}>
-            {" "}
-            <a>
-              <li>contact</li>
-            </a>
-          </Link>
-        </ul>
-      </nav>
+      
       <main className={`${styles.main} ${inter.className}`}>
         <div className={styles.center}>
-
+          
           <span className="myspan dummy">Hunting Coders</span>
           <p>Learn to code by watching others</p>
+          <div className={styles.imagewrap}> <Image className={styles.myImg} src="/home.jpg" width={237} height={158} ></Image></div>
+         
         </div>
         <div className="blogs">
-          <h2>Popular Blogs</h2>
+          <h2 style={{fontSize:"38px"}}>Popular Blogs</h2>
 
           <div className="blogItem">
             <h3>How to learn javascript</h3>
