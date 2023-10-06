@@ -13,10 +13,10 @@ const Contact = () => {
     console.log({ name: name, phone: phone, desc: desc, email: email });
     const dataa = { name: name, phone: phone, desc: desc, email: email };
     console.log(dataa);
-    const res = await axios.post("http://192.168.18.12:3000/api/postcontact", {
+    const res = await axios.post("http://localhost:3000/api/postcontact", {
       dataa,
     });
-   
+
     const data = res.data;
     console.log(data);
   };

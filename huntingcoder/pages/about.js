@@ -1,14 +1,12 @@
 import React from "react";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/About.module.css";
 
 const About = () => {
-
   return (
-   
     <div className={styles.aboutCenter}>
-       
-     
-      <h1 className="aboutHead">HuntingCoders: Where Coders Find Their Tribe</h1>
+      <h1 className="aboutHead">
+        HuntingCoders: Where Coders Find Their Tribe
+      </h1>
       <p className={styles.aboutWith}>
         In the vast digital expanse, there's a unique corner tailored
         specifically for the coding enthusiasts, called HuntingCoders. But this

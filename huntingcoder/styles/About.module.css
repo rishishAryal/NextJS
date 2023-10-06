@@ -1,0 +1,32 @@
+/* Home.module.css */
+
+.aboutCenter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4; /* Light gray background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+  }
+  
+  .aboutHead {
+    font-family: 'Arial', sans-serif;
+    font-size: 2rem;
+    color: #333; /* Dark gray text color */
+    margin-bottom: 1.5rem; /* Spacing between the header and the paragraph */
+    text-align: center; /* Centered text for the title */
+  }
+  
+  .aboutWith {
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555; /* Medium gray text color */
+    text-align: justify; /* Justified text for better alignment */
+  }
+  
+  

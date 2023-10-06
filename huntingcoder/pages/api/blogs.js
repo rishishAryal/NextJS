@@ -1,24 +1,22 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import * as fs from "fs/promises"; // Note the /promises here
-import path from "path";
+import * as fs from 'fs';
 
 export default async function handler(req, res) {
-  try {
-    const filenames = await fs.readdir("blogData", "utf-8");
-    const filteredFilenames = filenames.filter(
-      (filename) => filename !== ".DS_Store"
-    );
+ 
+  let data = await fs.promises.readdir("blogdata");
 
-    const blogPromises = filteredFilenames.map(async (filename) => {
-      const data = await fs.readFile(path.join("blogData", filename), "utf-8");
-      return JSON.parse(data);
-    });
+  // Filter out .DS_Store
+  data = data.filter(item => item !== '.DS_Store');
 
-    const allBlogs = (await Promise.all(blogPromises));
-    
-    res.status(200).json(allBlogs);
-  } catch (error) {
-    console.error("Error reading blog data:", error);
-    res.status(500).json({ error: "Failed to read blog data" });
+  data = data.slice(0, parseInt(req.query.count))
+  let myfile;
+  let allBlogs = [];
+  
+  for (let index = 0; index < data.length; index++) {
+    const item = data[index];
+    console.log(item)
+    myfile = await fs.promises.readFile(('blogdata/' + item), 'utf-8')
+    allBlogs.push(JSON.parse(myfile))
   }
+  
+  res.status(200).json(allBlogs)
 }
