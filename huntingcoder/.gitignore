@@ -11,8 +11,7 @@
 # next.js
 /.next/
 /out/
-blogData
-contactdata
+
 # production
 /build
 
