@@ -16,7 +16,7 @@ const Blog = (props) => {
       <main className={styles.main}>
         <div className="blogs">
           <h2 style={{ fontSize: "38px" }}>Popular Blogs</h2>
-          <div style={{ textAlign: "justify" }}>
+          <div>
             {blogs.map((blog, index) => (
               <div key={index} className="blogItem">
                 <p

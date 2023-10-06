@@ -13,19 +13,18 @@ const BlogPost = (props) => {
 
   return (
     <div className={styles.slug}>
-      <h1>Blog Post</h1>
-      <h1>{blog.title}</h1>
+      <div style={{ textAlign: "center" }}>
+        <h1>Blog Post</h1> <h1>{blog.title}</h1>
+      </div>
 
       <main className={styles.blogContent}>
         {blog && (
           <div
             dangerouslySetInnerHTML={createMarkup(blog.content)}
-            style={{ width: "700px", margin: "auto" }}
+            style={{ width: "95%",margin:"0 auto" }}
           ></div>
         )}{" "}
         <br></br>
-       
-        
       </main>
     </div>
   );

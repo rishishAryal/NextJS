@@ -1,9 +1,10 @@
 .main {
   text-align: center;
-  width: 60%;
-  padding: 40px;
+  width: 80%;
+  /* padding: 40px; */
   margin: auto;
- /* background-color: antiquewhite; */
+  /* background-color: antiquewhite; */
   /* text-align: justify; */
   /* min-height: 100vh; */
+  /* font-size: small; */
 }
