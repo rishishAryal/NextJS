@@ -1,45 +1,55 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import styles from "../../styles/BlogPost.module.css";
+import * as fs from "fs/promises";
 
 const BlogPost = (props) => {
   const [blog, setBlog] = useState(props.data);
   // Destructuring slug from router query
   // setBlog(props.data);
+  function createMarkup(c) {
+    return { __html: c };
+  }
+
   return (
     <div className={styles.slug}>
       <h1>Blog Post</h1>
       <h1>{blog.title}</h1>
 
-      <p className={styles.blogContent}>
-        {blog.content} <br></br>
-        <b style={{ marginTop: "10px", display: "inline-block" }}>
-          By {blog.author}
-        </b>
-      </p>
+      <main className={styles.blogContent}>
+        {blog && (
+          <div
+            dangerouslySetInnerHTML={createMarkup(blog.content)}
+            style={{ width: "700px", margin: "auto" }}
+          ></div>
+        )}{" "}
+        <br></br>
+       
+        
+      </main>
     </div>
   );
 };
 
-//server side rendering
+export async function getStaticPaths() {
+  return {
+    paths: [
+      { params: { slug: "Introduction-To-Javascript" } },
+      { params: { slug: "Mastering-Java:-A-Starter's-Guide" } },
+      { params: { slug: "Python-for-Beginners" } },
+    ],
+    fallback: false,
+  };
+}
 
-export async function getServerSideProps(context) {
-  try {
-    const { slug } = context.query;
-    const response = await fetch(
-      `http://localhost:3000/api/getblog?slug=${slug}`
-    );
-    const data = await response.json();
-    return {
-      props: { data },
-    };
-  } catch (error) {
-    return {
-      props: {
-        data: "error in fetching data",
-      },
-    };
-  }
+export async function getStaticProps(context) {
+  const { slug } = context.params;
+  const data = await fs.readFile(`blogData/${slug}.json`, "utf-8");
+  return {
+    props: {
+      data: JSON.parse(data),
+    },
+  };
 }
 
 export default BlogPost;

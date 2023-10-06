@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import styles from "../styles/Blog.module.css";
 import Link from "next/link";
+import * as fs from "fs/promises";
 
 const Blog = (props) => {
-  console.log(props);
-  const [blogs, setBlogs] = useState(props.data);
+  console.log(props.data);
+  const [blogs, setBlogs] = useState(props.data.filteredFilenames);
 
   // useEffect(() => {
 
@@ -29,7 +30,7 @@ const Blog = (props) => {
                 </p>
 
                 <p>
-                  {blog.content.substr(0, 100)} ...
+                  {blog.metadesc.substr(0, 100)} ...
                   <Link
                     style={{ textDecoration: "none", fontWeight: "bold" }}
                     href={`/blogpost/${blog.slug}`}
@@ -45,19 +46,29 @@ const Blog = (props) => {
     </div>
   );
 };
-export async function getServerSideProps(context) {
+export async function getStaticProps(context) {
   try {
-    let response = await fetch("http://localhost:3000/api/blogs");
-    let data = await response.json();
-    return {
-      props: { data },
-    };
-  } catch (error) {
+    const filenames = await fs.readdir("blogData", "utf-8");
+    const filteredFilenames = filenames.filter(
+      (filename) => filename !== ".DS_Store"
+    );
+    for (let i = 0; i < filteredFilenames.length; i++) {
+      const data = await fs.readFile(`blogData/${filteredFilenames[i]}`, "utf-8");
+      filteredFilenames[i] = JSON.parse(data);
+    }
     return {
       props: {
-        data: "error in fetching data",
+        data: {filteredFilenames},
+      },
+    };
+  } catch (error) {
+    console.error("Error fetching blog data:", error);
+    return {
+      props: {
+        data: [],
       },
     };
   }
 }
+
 export default Blog;
