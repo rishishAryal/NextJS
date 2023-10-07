@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "D": "next dev -H 192.168.18.12",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -11,7 +12,8 @@
   "dependencies": {
     "next": "13.5.4",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-icons": "^4.11.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.16",
