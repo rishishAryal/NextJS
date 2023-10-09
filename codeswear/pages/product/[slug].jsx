@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import { SiNike } from "react-icons/si";
-const Slug = () => {
+const Slug = ({ addToCart }) => {
   const { slug } = useRouter().query;
   const [pincode, setPincode] = useState("");
   const [serviceable, setServiceable] = useState();
@@ -37,9 +37,9 @@ const Slug = () => {
                   <svg
                     fill="currentColor"
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     className="w-4 h-4 text-pink-500"
                     viewBox="0 0 24 24"
                   >
@@ -48,9 +48,9 @@ const Slug = () => {
                   <svg
                     fill="currentColor"
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     className="w-4 h-4 text-pink-500"
                     viewBox="0 0 24 24"
                   >
@@ -59,9 +59,9 @@ const Slug = () => {
                   <svg
                     fill="currentColor"
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     className="w-4 h-4 text-pink-500"
                     viewBox="0 0 24 24"
                   >
@@ -70,9 +70,9 @@ const Slug = () => {
                   <svg
                     fill="currentColor"
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     className="w-4 h-4 text-pink-500"
                     viewBox="0 0 24 24"
                   >
@@ -81,9 +81,9 @@ const Slug = () => {
                   <svg
                     fill="none"
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     className="w-4 h-4 text-pink-500"
                     viewBox="0 0 24 24"
                   >
@@ -95,9 +95,9 @@ const Slug = () => {
                   <a className="text-gray-500">
                     <svg
                       fill="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       className="w-5 h-5"
                       viewBox="0 0 24 24"
                     >
@@ -107,9 +107,9 @@ const Slug = () => {
                   <a className="text-gray-500">
                     <svg
                       fill="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       className="w-5 h-5"
                       viewBox="0 0 24 24"
                     >
@@ -119,9 +119,9 @@ const Slug = () => {
                   <a className="text-gray-500">
                     <svg
                       fill="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       className="w-5 h-5"
                       viewBox="0 0 24 24"
                     >
@@ -158,9 +158,9 @@ const Slug = () => {
                       <svg
                         fill="none"
                         stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
                         className="w-4 h-4"
                         viewBox="0 0 24 24"
                       >
@@ -174,7 +174,19 @@ const Slug = () => {
                 <span className="title-font font-medium text-2xl text-gray-900">
                   $58.00
                 </span>
-                <button className="flex text-sm ml-4 md:ml-16 text-white bg-pink-500 border-0 py-2 px-2 lg:px-6 focus:outline-none hover:bg-pink-600 rounded">
+                <button
+                  onClick={() => {
+                    addToCart(
+                      slug,
+                      1,
+                      499,
+                      "The Catcher in the Rye",
+                      "XXL",
+                      "red"
+                    );
+                  }}
+                  className="flex text-sm ml-4 md:ml-16 text-white bg-pink-500 border-0 py-2 px-2 lg:px-6 focus:outline-none hover:bg-pink-600 rounded"
+                >
                   Add to cart
                 </button>
                 <button className="flex ml-3 text-sm text-white bg-pink-500 border-0 py-2 px-2 lg:px-6 focus:outline-none hover:bg-pink-600 rounded">
@@ -183,9 +195,9 @@ const Slug = () => {
                 <button className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
                   <svg
                     fill="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     className="w-5 h-5"
                     viewBox="0 0 24 24"
                   >

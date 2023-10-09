@@ -30,7 +30,7 @@ const Hoodies = () => {
                 </div>
                 <Link
                   href={"/product/wear-the-code"}
-                  class="text-white bg-pink-500 hover:bg-pink-600 transition-all focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 m-auto md:mx-0  rounded-md text-md px-4 py-1 mt-2 block w-fit text-center   "
+                  className="text-white bg-pink-500 hover:bg-pink-600 transition-all focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 m-auto md:mx-0  rounded-md text-md px-4 py-1 mt-2 block w-fit text-center   "
                 >
                   Buy Now
                 </Link>
@@ -59,7 +59,7 @@ const Hoodies = () => {
                 </div>
                 <Link
                   href={"/product/wear-the-code"}
-                  class="text-white bg-pink-500 hover:bg-pink-600 transition-all focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 m-auto md:mx-0  rounded-md text-md px-4 py-1 mt-2 block w-fit text-center   "
+                  className="text-white bg-pink-500 hover:bg-pink-600 transition-all focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 m-auto md:mx-0  rounded-md text-md px-4 py-1 mt-2 block w-fit text-center   "
                 >
                   Buy Now
                 </Link>
@@ -88,7 +88,7 @@ const Hoodies = () => {
                 </div>
                 <Link
                   href={"/product/wear-the-code"}
-                  class="text-white bg-pink-500 hover:bg-pink-600 transition-all focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 m-auto md:mx-0  rounded-md text-md px-4 py-1 mt-2 block w-fit text-center   "
+                  clasName="text-white bg-pink-500 hover:bg-pink-600 transition-all focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 m-auto md:mx-0  rounded-md text-md px-4 py-1 mt-2 block w-fit text-center   "
                 >
                   Buy Now
                 </Link>
@@ -117,7 +117,7 @@ const Hoodies = () => {
                 </div>
                 <Link
                   href={"/product/wear-the-code"}
-                  class="text-white bg-pink-500 hover:bg-pink-600 transition-all focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 m-auto md:mx-0  rounded-md text-md px-4 py-1 mt-2 block w-fit text-center   "
+                  className="text-white bg-pink-500 hover:bg-pink-600 transition-all focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 m-auto md:mx-0  rounded-md text-md px-4 py-1 mt-2 block w-fit text-center   "
                 >
                   Buy Now
                 </Link>
@@ -146,7 +146,7 @@ const Hoodies = () => {
                 </div>
                 <Link
                   href={"/product/wear-the-code"}
-                  class="text-white bg-pink-500 hover:bg-pink-600 transition-all focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 m-auto md:mx-0  rounded-md text-md px-4 py-1 mt-2 block w-fit text-center   "
+                  className="text-white bg-pink-500 hover:bg-pink-600 transition-all focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 m-auto md:mx-0  rounded-md text-md px-4 py-1 mt-2 block w-fit text-center   "
                 >
                   Buy Now
                 </Link>
@@ -175,7 +175,7 @@ const Hoodies = () => {
                 </div>
                 <Link
                   href={"/product/wear-the-code"}
-                  class="text-white bg-pink-500 hover:bg-pink-600 transition-all focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 m-auto md:mx-0  rounded-md text-md px-4 py-1 mt-2 block w-fit text-center   "
+                  className="text-white bg-pink-500 hover:bg-pink-600 transition-all focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 m-auto md:mx-0  rounded-md text-md px-4 py-1 mt-2 block w-fit text-center   "
                 >
                   Buy Now
                 </Link>
@@ -204,7 +204,7 @@ const Hoodies = () => {
                 </div>
                 <Link
                   href={"/product/wear-the-code"}
-                  class="text-white bg-pink-500 hover:bg-pink-600 transition-all focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 m-auto md:mx-0  rounded-md text-md px-4 py-1 mt-2 block w-fit text-center   "
+                  className="text-white bg-pink-500 hover:bg-pink-600 transition-all focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 m-auto md:mx-0  rounded-md text-md px-4 py-1 mt-2 block w-fit text-center   "
                 >
                   Buy Now
                 </Link>
@@ -233,7 +233,7 @@ const Hoodies = () => {
                 </div>
                 <Link
                   href={"/product/wear-the-code"}
-                  class="text-white bg-pink-500 hover:bg-pink-600 transition-all focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 m-auto md:mx-0  rounded-md text-md px-4 py-1 mt-2 block w-fit text-center   "
+                  className="text-white bg-pink-500 hover:bg-pink-600 transition-all focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 m-auto md:mx-0  rounded-md text-md px-4 py-1 mt-2 block w-fit text-center   "
                 >
                   Buy Now
                 </Link>
@@ -262,7 +262,7 @@ const Hoodies = () => {
                 </div>
                 <Link
                   href={"/product/wear-the-code"}
-                  class="text-white bg-pink-500 hover:bg-pink-600 transition-all focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 m-auto md:mx-0  rounded-md text-md px-4 py-1 mt-2 block w-fit text-center   "
+                  className="text-white bg-pink-500 hover:bg-pink-600 transition-all focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 m-auto md:mx-0  rounded-md text-md px-4 py-1 mt-2 block w-fit text-center   "
                 >
                   Buy Now
                 </Link>
@@ -291,7 +291,7 @@ const Hoodies = () => {
                 </div>
                 <Link
                   href={"/product/wear-the-code"}
-                  class="text-white bg-pink-500 hover:bg-pink-600 transition-all focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 m-auto md:mx-0  rounded-md text-md px-4 py-1 mt-2 block w-fit text-center   "
+                  className="text-white bg-pink-500 hover:bg-pink-600 transition-all focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 m-auto md:mx-0  rounded-md text-md px-4 py-1 mt-2 block w-fit text-center   "
                 >
                   Buy Now
                 </Link>
@@ -320,7 +320,7 @@ const Hoodies = () => {
                 </div>
                 <Link
                   href={"/product/wear-the-code"}
-                  class="text-white bg-pink-500 hover:bg-pink-600 transition-all focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 m-auto md:mx-0  rounded-md text-md px-4 py-1 mt-2 block w-fit text-center   "
+                  className="text-white bg-pink-500 hover:bg-pink-600 transition-all focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 m-auto md:mx-0  rounded-md text-md px-4 py-1 mt-2 block w-fit text-center   "
                 >
                   Buy Now
                 </Link>
@@ -368,7 +368,7 @@ const Hoodies = () => {
                 </div>
                 <Link
                   href={"/product/wear-the-code"}
-                  class="text-white bg-pink-500 hover:bg-pink-600 transition-all focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 m-auto md:mx-0  rounded-md text-md px-4 py-1 mt-2 block w-fit text-center   "
+                  className="text-white bg-pink-500 hover:bg-pink-600 transition-all focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 m-auto md:mx-0  rounded-md text-md px-4 py-1 mt-2 block w-fit text-center   "
                 >
                   Buy Now
                 </Link>
@@ -397,7 +397,7 @@ const Hoodies = () => {
                 </div>
                 <Link
                   href={"/product/wear-the-code"}
-                  class="text-white bg-pink-500 hover:bg-pink-600 transition-all focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 m-auto md:mx-0  rounded-md text-md px-4 py-1 mt-2 block w-fit text-center   "
+                  className="text-white bg-pink-500 hover:bg-pink-600 transition-all focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 m-auto md:mx-0  rounded-md text-md px-4 py-1 mt-2 block w-fit text-center   "
                 >
                   Buy Now
                 </Link>
@@ -426,7 +426,7 @@ const Hoodies = () => {
                 </div>
                 <Link
                   href={"/product/wear-the-code"}
-                  class="text-white bg-pink-500 hover:bg-pink-600 transition-all focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 m-auto md:mx-0  rounded-md text-md px-4 py-1 mt-2 block w-fit text-center   "
+                  className="text-white bg-pink-500 hover:bg-pink-600 transition-all focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 m-auto md:mx-0  rounded-md text-md px-4 py-1 mt-2 block w-fit text-center   "
                 >
                   Buy Now
                 </Link>
@@ -455,7 +455,7 @@ const Hoodies = () => {
                 </div>
                 <Link
                   href={"/product/wear-the-code"}
-                  class="text-white bg-pink-500 hover:bg-pink-600 transition-all focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 m-auto md:mx-0  rounded-md text-md px-4 py-1 mt-2 block w-fit text-center   "
+                  className="text-white bg-pink-500 hover:bg-pink-600 transition-all focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 m-auto md:mx-0  rounded-md text-md px-4 py-1 mt-2 block w-fit text-center   "
                 >
                   Buy Now
                 </Link>
@@ -484,7 +484,7 @@ const Hoodies = () => {
                 </div>
                 <Link
                   href={"/product/wear-the-code"}
-                  class="text-white bg-pink-500 hover:bg-pink-600 transition-all focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 m-auto md:mx-0  rounded-md text-md px-4 py-1 mt-2 block w-fit text-center   "
+                  className="text-white bg-pink-500 hover:bg-pink-600 transition-all focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 m-auto md:mx-0  rounded-md text-md px-4 py-1 mt-2 block w-fit text-center   "
                 >
                   Buy Now
                 </Link>
@@ -513,7 +513,7 @@ const Hoodies = () => {
                 </div>
                 <Link
                   href={"/product/wear-the-code"}
-                  class="text-white bg-pink-500 hover:bg-pink-600 transition-all focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 m-auto md:mx-0  rounded-md text-md px-4 py-1 mt-2 block w-fit text-center   "
+                  className="text-white bg-pink-500 hover:bg-pink-600 transition-all focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 m-auto md:mx-0  rounded-md text-md px-4 py-1 mt-2 block w-fit text-center   "
                 >
                   Buy Now
                 </Link>
@@ -542,7 +542,7 @@ const Hoodies = () => {
                 </div>
                 <Link
                   href={"/product/wear-the-code"}
-                  class="text-white bg-pink-500 hover:bg-pink-600 transition-all focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 m-auto md:mx-0  rounded-md text-md px-4 py-1 mt-2 block w-fit text-center   "
+                  className="text-white bg-pink-500 hover:bg-pink-600 transition-all focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 m-auto md:mx-0  rounded-md text-md px-4 py-1 mt-2 block w-fit text-center   "
                 >
                   Buy Now
                 </Link>
@@ -571,7 +571,7 @@ const Hoodies = () => {
                 </div>
                 <Link
                   href={"/product/wear-the-code"}
-                  class="text-white bg-pink-500 hover:bg-pink-600 transition-all focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 m-auto md:mx-0  rounded-md text-md px-4 py-1 mt-2 block w-fit text-center   "
+                  className="text-white bg-pink-500 hover:bg-pink-600 transition-all focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 m-auto md:mx-0  rounded-md text-md px-4 py-1 mt-2 block w-fit text-center   "
                 >
                   Buy Now
                 </Link>
@@ -600,7 +600,7 @@ const Hoodies = () => {
                 </div>
                 <Link
                   href={"/product/wear-the-code"}
-                  class="text-white bg-pink-500 hover:bg-pink-600 transition-all focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 m-auto md:mx-0  rounded-md text-md px-4 py-1 mt-2 block w-fit text-center   "
+                  className="text-white bg-pink-500 hover:bg-pink-600 transition-all focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 m-auto md:mx-0  rounded-md text-md px-4 py-1 mt-2 block w-fit text-center   "
                 >
                   Buy Now
                 </Link>
@@ -629,7 +629,7 @@ const Hoodies = () => {
                 </div>
                 <Link
                   href={"/product/wear-the-code"}
-                  class="text-white bg-pink-500 hover:bg-pink-600 transition-all focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 m-auto md:mx-0  rounded-md text-md px-4 py-1 mt-2 block w-fit text-center   "
+                  className="text-white bg-pink-500 hover:bg-pink-600 transition-all focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 m-auto md:mx-0  rounded-md text-md px-4 py-1 mt-2 block w-fit text-center   "
                 >
                   Buy Now
                 </Link>
@@ -658,7 +658,7 @@ const Hoodies = () => {
                 </div>
                 <Link
                   href={"/product/wear-the-code"}
-                  class="text-white bg-pink-500 hover:bg-pink-600 transition-all focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 m-auto md:mx-0  rounded-md text-md px-4 py-1 mt-2 block w-fit text-center   "
+                  className="text-white bg-pink-500 hover:bg-pink-600 transition-all focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 m-auto md:mx-0  rounded-md text-md px-4 py-1 mt-2 block w-fit text-center   "
                 >
                   Buy Now
                 </Link>
