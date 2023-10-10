@@ -7,6 +7,7 @@ import {
   AiFillPlusCircle,
   AiFillMinusCircle,
 } from "react-icons/ai";
+import { MdAccountCircle } from "react-icons/md";
 import { BsFillBagFill } from "react-icons/bs";
 
 const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
@@ -65,14 +66,21 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
         </ul>
       </div>
 
-      <div onClick={toogleCart} className="cart absolute right-0 mx-5 top-5">
-        <AiOutlineShoppingCart className="text-3xl cursor-pointer text-pink-500 hover:text-pink-600 " />
+      <div className="cart absolute gap-1 right-0 mx-5 top-5 flex justify-center items-center">
+        <Link href={"/login"}>
+          <MdAccountCircle className="text-3xl cursor-pointer text-pink-500 hover:text-pink-600"></MdAccountCircle>
+        </Link>
+
+        <AiOutlineShoppingCart
+          onClick={toogleCart}
+          className="text-3xl cursor-pointer text-pink-500 hover:text-pink-600 "
+        />
       </div>
 
       <div
         ref={ref}
         className={`sideCart absolute h-[100vh] top-0 right-0  bg-pink-100 px-6 w-[20rem] py-10 transform transition-transform 
-        ${Object.keys(cart).length === 0 ? "translate-x-full": "translate-x-0"}
+        ${Object.keys(cart).length === 0 ? "translate-x-full" : "translate-x-0"}
         translate-x-0 `}
       >
         <h1 className="font-bold text-xl text-center">Your Cart</h1>
