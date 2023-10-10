@@ -12,6 +12,7 @@ export default function App({ Component, pageProps }) {
       const storedCart = localStorage.getItem("cart");
       if (storedCart) {
         setCart(JSON.parse(storedCart));
+        saveCart(JSON.parse(storedCart));
       }
     } catch (e) {
       console.log(e);
@@ -72,6 +73,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Navbar
+        key={subTotal}
         cart={cart}
         addToCart={addToCart}
         removeFromCart={removeFromCart}

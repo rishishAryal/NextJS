@@ -71,7 +71,9 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
 
       <div
         ref={ref}
-        className="sideCart absolute h-[100vh] top-0 right-0  bg-pink-100 px-6 w-[20rem] py-10 transform transition-transform translate-x-full "
+        className={`sideCart absolute h-[100vh] top-0 right-0  bg-pink-100 px-6 w-[20rem] py-10 transform transition-transform 
+        ${Object.keys(cart).length === 0 ? "translate-x-full": "translate-x-0"}
+        translate-x-0 `}
       >
         <h1 className="font-bold text-xl text-center">Your Cart</h1>
         <span onClick={toogleCart} className="absolute top-5 right-2">
@@ -92,7 +94,7 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
                         console.log("cart", cart);
                         removeFromCart(
                           k,
-
+                          1,
                           cart[k].price,
                           cart[k].name,
                           cart[k].size,
@@ -121,17 +123,21 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
               </li>
             );
           })}
+          <span>subtotal :$ {subTotal}</span>
         </ol>
         <div className="flex  justify-center gap-1">
-          <button className="flex w-fit  text-center  mt-10 text-white bg-pink-500 border-0 py-2 px-2 focus:outline-none hover:bg-pink-600 rounded">
-            <BsFillBagFill className="m-1" /> Checkout
-          </button>
           <button
             onClick={clearCart}
             className="flex w-fit  text-center  mt-10 text-white bg-pink-500 border-0 py-2 px-2 focus:outline-none hover:bg-pink-600 rounded"
           >
             Clear Cart
           </button>
+
+          <Link href={"/checkout"}>
+            <button className="flex w-fit  text-center  mt-10 text-white bg-pink-500 border-0 py-2 px-2 focus:outline-none hover:bg-pink-600 rounded">
+              <BsFillBagFill className="m-1" /> Checkout
+            </button>
+          </Link>
         </div>
       </div>
     </div>
