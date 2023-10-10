@@ -4,27 +4,27 @@ const Schema = mongoose.Schema;
 const ProductSchema = new Schema(
   {
     title: {
-      type: string,
+      type: String,
       ref: "User",
       required: true,
     },
     description: {
-      type: string,
+      type: String,
       required: true,
     },
     img: {
-      type: string,
+      type: String,
       required: true,
     },
     category: {
-      type: string,
+      type: String,
       required: true,
     },
     size: {
-      type: string,
+      type: String,
     },
     color: {
-      type: string,
+      type: String,
     },
     price: {
       type: Number,
@@ -35,7 +35,7 @@ const ProductSchema = new Schema(
       required: true,
     },
     slug: {
-      type: string,
+      type: String,
       required: true,
       unique: true,
     },
@@ -44,4 +44,4 @@ const ProductSchema = new Schema(
   { timestamps: true }
 );
 
-export default mongoose.models("Product", ProductSchema);
+module.exports = mongoose.models.Product || mongoose.model("Product", ProductSchema);
