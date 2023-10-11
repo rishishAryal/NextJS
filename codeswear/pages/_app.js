@@ -15,7 +15,7 @@ export default function App({ Component, pageProps }) {
         saveCart(JSON.parse(storedCart));
       }
     } catch (e) {
-      console.log(e);
+      
       localStorage.clear();
     }
   }, []);
@@ -51,9 +51,7 @@ export default function App({ Component, pageProps }) {
 
   const removeFromCart = (itemCode, qty = 1, price, name, size, variant) => {
     const newCart = { ...cart };
-    console.log(newCart);
-    console.log(itemCode);
-    console.log(newCart[itemCode]);
+
     if (itemCode in newCart) {
       newCart[itemCode].qty -= qty;
       if (newCart[itemCode].qty <= 0) {

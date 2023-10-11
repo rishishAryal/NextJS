@@ -132,7 +132,7 @@ const Checkout = ({ cart, subTotal, addToCart, removeFromCart }) => {
                     <div className=" w-1/3 flex text-xl font-semibold items-center justify-evenly">
                       <AiFillMinusCircle
                         onClick={() => {
-                          console.log("cart", cart);
+                      
                           removeFromCart(
                             k,
                             1,
@@ -147,7 +147,7 @@ const Checkout = ({ cart, subTotal, addToCart, removeFromCart }) => {
                       {cart[k].qty}
                       <AiFillPlusCircle
                         onClick={() => {
-                          console.log("cart", cart);
+                      
                           addToCart(
                             k,
                             1,

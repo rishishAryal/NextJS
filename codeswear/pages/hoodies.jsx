@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import axios from "axios";
 const Hoodies = ({ products }) => {
-  // console.log(Tshirts);
+
   const [items, setItems] = useState(products);
 
   return (

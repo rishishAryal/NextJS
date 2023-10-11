@@ -3,10 +3,10 @@ import Link from "next/link";
 import axios from "axios";
 const Mugs = ({ products }) => {
 
-  // console.log(Tshirts);
+
   const [items, setItems] = useState(products);
 
-// console.log(items);
+
   return (
     <div>
       <section className="text-gray-600 body-font">

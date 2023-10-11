@@ -11,7 +11,7 @@ import { MdAccountCircle } from "react-icons/md";
 import { BsFillBagFill } from "react-icons/bs";
 
 const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
-  // console.log(cart, addToCart, removeFromCart, clearCart, subTotal);
+  
   const toogleCart = () => {
     const classList = ref.current.classList;
     if (classList.contains("translate-x-full")) {
@@ -99,7 +99,7 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
                   <div className=" w-1/3 flex text-xl font-semibold items-center justify-evenly">
                     <AiFillMinusCircle
                       onClick={() => {
-                        console.log("cart", cart);
+                      
                         removeFromCart(
                           k,
                           1,
@@ -114,7 +114,7 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
                     {cart[k].qty}
                     <AiFillPlusCircle
                       onClick={() => {
-                        console.log("cart", cart);
+                       
                         addToCart(
                           k,
                           1,
