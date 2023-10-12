@@ -17,6 +17,7 @@ const Tshirt = ({ products }) => {
     black: "bg-black",
     white: "bg-white",
     brown: "bg-brown-500",
+    blue: "bg-blue-500",
   };
 
   return (
