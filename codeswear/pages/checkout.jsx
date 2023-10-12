@@ -121,7 +121,7 @@ const Checkout = ({ cart, subTotal, addToCart, removeFromCart }) => {
       <div className="sideCart   px-6 w-[20rem] py-5  ">
         <ol className="list-decimal font-semibold">
           {Object.keys(cart).length === 0 && (
-            <div className="text-center mt-9 font-bold">Cart is Empty</div>
+            <div className="text-left text-2xl  font-bold">Cart is Empty ☹️ </div>
           )}
           <div>
             {Object.keys(cart).map((k) => {
@@ -132,7 +132,6 @@ const Checkout = ({ cart, subTotal, addToCart, removeFromCart }) => {
                     <div className=" w-1/3 flex text-xl font-semibold items-center justify-evenly">
                       <AiFillMinusCircle
                         onClick={() => {
-                      
                           removeFromCart(
                             k,
                             1,
@@ -147,7 +146,6 @@ const Checkout = ({ cart, subTotal, addToCart, removeFromCart }) => {
                       {cart[k].qty}
                       <AiFillPlusCircle
                         onClick={() => {
-                      
                           addToCart(
                             k,
                             1,
@@ -161,15 +159,17 @@ const Checkout = ({ cart, subTotal, addToCart, removeFromCart }) => {
                       />
                     </div>
                   </div>
-                  <span>subtotal :$ {subTotal}</span>
                 </li>
               );
             })}
+            { subTotal>0 && <div className=" mt-5 flex justify-between items-center">
+              <span className="text-md">Subtotal: ${subTotal}</span>
+              <button className="flex w-fit   text-white bg-pink-500 border-0 py-2 px-2 focus:outline-none hover:bg-pink-600 rounded">
+                Pay $ {subTotal}
+              </button>
+            </div>}
           </div>
         </ol>
-        <button className="flex w-fit  text-center  mt-10 text-white bg-pink-500 border-0 py-2 px-2 focus:outline-none hover:bg-pink-600 rounded">
-           Pay $ {subTotal}
-        </button>
       </div>
     </div>
   );

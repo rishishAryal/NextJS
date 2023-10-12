@@ -4,7 +4,9 @@ import { SiNike } from "react-icons/si";
 import Product from "../../models/Product";
 import connectDB from "@/middleware/mongoose";
 import mongoose from "mongoose";
-const Slug = ({ addToCart, product, variants }) => {
+const Slug = ({ addToCart, product, variants, buyNow }) => {
+  console.log(product);
+  const Router = useRouter();
   const { slug } = useRouter().query;
   const [pincode, setPincode] = useState("");
   const [serviceable, setServiceable] = useState();
@@ -24,9 +26,19 @@ const Slug = ({ addToCart, product, variants }) => {
   const refreshVariants = (newsize, newcolor) => {
     let url = `http://localhost:3000/product/${variants[newcolor][newsize].slug}`;
     window.location.href = url;
-
   };
-  const colors = ["red", "pink", "green", "yellow", "purple", "orange", "black", "white", "brown", "blue"];
+  const colors = [
+    "red",
+    "pink",
+    "green",
+    "yellow",
+    "purple",
+    "orange",
+    "black",
+    "white",
+    "brown",
+    "blue",
+  ];
   const sizes = ["S", "XS", "M", "L", "XL", "XXL"];
 
   return (
@@ -48,18 +60,10 @@ const Slug = ({ addToCart, product, variants }) => {
                 {`${product.size} / ${
                   product.color.charAt(0).toUpperCase() + product.color.slice(1)
                 }`}
-                ) - {product.category} 
+                ) - {product.category}
               </h1>
-              <div className="flex mb-4">
-
-
-                
-
-
-
-
-              </div>
-              <p  className="leading-relaxed px-4">{product.description}</p>
+              <div className="flex mb-4"></div>
+              <p className="leading-relaxed px-4">{product.description}</p>
               <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
                 {/* <div className="flex">
                   <span className="mr-3">Color</span>
@@ -200,40 +204,51 @@ const Slug = ({ addToCart, product, variants }) => {
                     )}
                 </div> */}
                 <div className="flex">
-      <span className="mr-3">Color</span>
-      {colors.map((currentColor) => {
-        if (Object.keys(variants).includes(currentColor) && Object.keys(variants[currentColor]).includes(size)) {
-          return (
-            <button
-              key={currentColor}
-              onClick={() => {
-                setColor(currentColor);
-                refreshVariants(size, currentColor);
-              }}
-              className={`border-2 bg-${currentColor}-500 rounded-full w-6 h-6 focus:outline-none ${
-                color === currentColor ? "border-black" : "border-gray-500"
-              }`}
-            ></button>
-          );
-        }
-        return null;
-      })}
-    </div>
+                  <span className="mr-3">Color</span>
+                  {colors.map((currentColor) => {
+                    if (
+                      Object.keys(variants).includes(currentColor) &&
+                      Object.keys(variants[currentColor]).includes(size)
+                    ) {
+                      return (
+                        <button
+                          key={currentColor}
+                          onClick={() => {
+                            setColor(currentColor);
+                            refreshVariants(size, currentColor);
+                          }}
+                          className={`border-2 bg-${currentColor}-500 rounded-full w-6 h-6 focus:outline-none ${
+                            color === currentColor
+                              ? "border-black"
+                              : "border-gray-500"
+                          }`}
+                        ></button>
+                      );
+                    }
+                    return null;
+                  })}
+                </div>
                 <div className="flex ml-6 items-center">
                   <span className="mr-3">Size</span>
                   <div className="relative">
-                  <select
-        value={size}
-        onChange={(e) => refreshVariants(e.target.value, color)}
-        className="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-pink-200 focus:border-pink-500 text-base pl-3 pr-10"
-      >
-        {sizes.map((currentSize) => {
-          if (Object.keys(variants[color]).includes(currentSize)) {
-            return <option key={currentSize} value={currentSize}>{currentSize}</option>;
-          }
-          return null;
-        })}
-      </select>
+                    <select
+                      value={size}
+                      onChange={(e) => refreshVariants(e.target.value, color)}
+                      className="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-pink-200 focus:border-pink-500 text-base pl-3 pr-10"
+                    >
+                      {sizes.map((currentSize) => {
+                        if (
+                          Object.keys(variants[color]).includes(currentSize)
+                        ) {
+                          return (
+                            <option key={currentSize} value={currentSize}>
+                              {currentSize}
+                            </option>
+                          );
+                        }
+                        return null;
+                      })}
+                    </select>
                     <span className="absolute right-0 top-0 h-full w-10 text-center text-gray-600 pointer-events-none flex items-center justify-center">
                       <svg
                         fill="none"
@@ -260,7 +275,10 @@ const Slug = ({ addToCart, product, variants }) => {
                       slug,
                       1,
                       product.price,
-                      product.title,
+                      `${product.title} ${"("} ${product.size} / ${
+                        product.color.charAt(0).toUpperCase() +
+                        product.color.slice(1)
+                      }${")"}`,
                       size,
                       color
                     );
@@ -269,7 +287,22 @@ const Slug = ({ addToCart, product, variants }) => {
                 >
                   Add to cart
                 </button>
-                <button className="flex ml-3 text-sm text-white bg-pink-500 border-0 py-2 px-2 lg:px-6 focus:outline-none hover:bg-pink-600 rounded">
+                <button
+                  onClick={() => {
+                    buyNow(
+                      slug,
+                      1,
+                      product.price,
+                      `${product.title} ${"("} ${product.size} / ${
+                        product.color.charAt(0).toUpperCase() +
+                        product.color.slice(1)
+                      }${")"}`,
+                      size,
+                      color
+                    );
+                  }}
+                  className="flex ml-3 text-sm text-white bg-pink-500 border-0 py-2 px-2 lg:px-6 focus:outline-none hover:bg-pink-600 rounded"
+                >
                   Buy Now
                 </button>
                 {/* <button className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
