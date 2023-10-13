@@ -9,6 +9,8 @@ import {
 } from "react-icons/ai";
 import { MdAccountCircle } from "react-icons/md";
 import { BsFillBagFill } from "react-icons/bs";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
   
@@ -135,7 +137,19 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
         </ol>
         <div className="flex  justify-center gap-1">
           <button
-            onClick={clearCart}
+            onClick={()=>{
+              clearCart()
+              toast.success('Cart Cleared', {
+                position: "top-right",
+                autoClose: 1999,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                });
+            }}
             className="flex w-fit  text-center  mt-10 text-white bg-pink-500 border-0 py-2 px-2 focus:outline-none hover:bg-pink-600 rounded"
           >
             Clear Cart

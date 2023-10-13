@@ -4,6 +4,8 @@ import { SiNike } from "react-icons/si";
 import Product from "../../models/Product";
 import connectDB from "@/middleware/mongoose";
 import mongoose from "mongoose";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const Slug = ({ addToCart, product, variants, buyNow }) => {
   console.log(product);
   const Router = useRouter();
@@ -16,8 +18,28 @@ const Slug = ({ addToCart, product, variants, buyNow }) => {
 
     if (data.includes(parseInt(pincode, 10))) {
       setServiceable(true);
+      toast.success("We deliver to your place", {
+        position: "top-right",
+        autoClose: 500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
     } else {
       setServiceable(false);
+      toast.error('Your pin code is not servicable', {
+        position: "top-right",
+        autoClose: 500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
     }
   };
   const [color, setColor] = useState(product.color);
@@ -40,6 +62,17 @@ const Slug = ({ addToCart, product, variants, buyNow }) => {
     "blue",
   ];
   const sizes = ["S", "XS", "M", "L", "XL", "XXL"];
+  const notify = () =>
+    toast.success("🦄 Wow so easy!", {
+      position: "top-right",
+      autoClose: 1999,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
 
   return (
     <div>
@@ -282,6 +315,16 @@ const Slug = ({ addToCart, product, variants, buyNow }) => {
                       size,
                       color
                     );
+                    toast.success('Item added Successfully', {
+                      position: "top-right",
+                      autoClose: 500,
+                      hideProgressBar: false,
+                      closeOnClick: true,
+                      pauseOnHover: true,
+                      draggable: true,
+                      progress: undefined,
+                      theme: "light",
+                      });
                   }}
                   className="flex text-sm ml-4 md:ml-16 text-white bg-pink-500 border-0 py-2 px-2 lg:px-6 focus:outline-none hover:bg-pink-600 rounded"
                 >
@@ -333,6 +376,18 @@ const Slug = ({ addToCart, product, variants, buyNow }) => {
                   Check
                 </button>
               </div>
+              <ToastContainer
+                position="top-right"
+                autoClose={1999}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light"
+              />
               {serviceable === false && (
                 <div className="text-red-600 text-sm mt-2">
                   We do not deliver to this pincode yet!
