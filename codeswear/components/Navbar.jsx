@@ -13,7 +13,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
-  
+  console.log(cart);
   const toogleCart = () => {
     const classList = ref.current.classList;
     if (classList.contains("translate-x-full")) {
@@ -101,7 +101,6 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
                   <div className=" w-1/3 flex text-xl font-semibold items-center justify-evenly">
                     <AiFillMinusCircle
                       onClick={() => {
-                      
                         removeFromCart(
                           k,
                           1,
@@ -116,7 +115,6 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
                     {cart[k].qty}
                     <AiFillPlusCircle
                       onClick={() => {
-                       
                         addToCart(
                           k,
                           1,
@@ -133,34 +131,37 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
               </li>
             );
           })}
-          <span>subtotal :$ {subTotal}</span>
+          <span className="inline-block">Subtotal :$ {subTotal}</span>
         </ol>
-        <div className="flex  justify-center gap-1">
-          <button
-            onClick={()=>{
-              clearCart()
-              toast.success('Cart Cleared', {
-                position: "top-right",
-                autoClose: 1999,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "light",
+        {Object.keys(cart).length > 0 && (
+          <div className="flex  gap-3 mt-2 items-center ">
+            
+            <button
+              onClick={() => {
+                clearCart();
+                toast.success("Cart Cleared", {
+                  position: "top-right",
+                  autoClose: 500,
+                  hideProgressBar: false,
+                  closeOnClick: true,
+                  pauseOnHover: true,
+                  draggable: true,
+                  progress: undefined,
+                  theme: "light",
                 });
-            }}
-            className="flex w-fit  text-center  mt-10 text-white bg-pink-500 border-0 py-2 px-2 focus:outline-none hover:bg-pink-600 rounded"
-          >
-            Clear Cart
-          </button>
-
-          <Link href={"/checkout"}>
-            <button className="flex w-fit  text-center  mt-10 text-white bg-pink-500 border-0 py-2 px-2 focus:outline-none hover:bg-pink-600 rounded">
-              <BsFillBagFill className="m-1" /> Checkout
+              }}
+              className="flex w-fit  text-center   text-white bg-pink-500 border-0 py-2 px-2 focus:outline-none hover:bg-pink-600 rounded"
+            >
+              Clear Cart
             </button>
-          </Link>
-        </div>
+
+            <Link href={"/checkout"}>
+              <button className="flex w-fit  text-center   text-white bg-pink-500 border-0 py-2 px-2 focus:outline-none hover:bg-pink-600 rounded">
+                <BsFillBagFill className="m-1" /> Checkout
+              </button>
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );

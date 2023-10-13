@@ -93,7 +93,7 @@ const Slug = ({ addToCart, product, variants, buyNow }) => {
                 {`${product.size} / ${
                   product.color.charAt(0).toUpperCase() + product.color.slice(1)
                 }`}
-                ) - {product.category}
+                ) - {product.category.charAt(0).toUpperCase()+ product.category.slice(1)}
               </h1>
               <div className="flex mb-4"></div>
               <p className="leading-relaxed px-4">{product.description}</p>

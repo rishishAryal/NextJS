@@ -1,0 +1,403 @@
+[
+  {
+    "title": "Ruby Radiance",
+    "description": "Experience everyday luxury with our Classic Comfort Tee. Crafted from a premium cotton blend, this T-shirt offers a soft touch and a flattering fit. Whether you're out for a casual stroll or a weekend hangout, it's the staple piece every wardrobe needs. Simple, stylish, and timeless.",
+    "img": "tshirt.webp",
+    "category": "Tshirt",
+    "size": "M",
+    "color": "red",
+    "price": 20,
+    "availableQty": 100,
+    "slug": "ruby-radiance"
+  },
+  {
+    "title": "Azure Allure",
+    "description": "Experience everyday luxury with our Classic Comfort Tee. Crafted from a premium cotton blend, this T-shirt offers a soft touch and a flattering fit. Whether you're out for a casual stroll or a weekend hangout, it's the staple piece every wardrobe needs. Simple, stylish, and timeless.",
+    "img": "tshirt.webp",
+    "category": "Tshirt",
+    "size": "L",
+    "color": "blue",
+    "price": 20,
+    "availableQty": 95,
+    "slug": "azure-allure"
+  },
+  {
+    "title": "Emerald Essence",
+    "description": "Experience everyday luxury with our Classic Comfort Tee. Crafted from a premium cotton blend, this T-shirt offers a soft touch and a flattering fit. Whether you're out for a casual stroll or a weekend hangout, it's the staple piece every wardrobe needs. Simple, stylish, and timeless.",
+    "img": "pic.webp",
+    "category": "Tshirt",
+    "size": "S",
+    "color": "green",
+    "price": 18,
+    "availableQty": 90,
+    "slug": "emerald-essence"
+  },
+  {
+    "title": "Golden Gleam",
+    "description": "Experience everyday luxury with our Classic Comfort Tee. Crafted from a premium cotton blend, this T-shirt offers a soft touch and a flattering fit. Whether you're out for a casual stroll or a weekend hangout, it's the staple piece every wardrobe needs. Simple, stylish, and timeless.",
+    "img": "pic.webp",
+    "category": "Tshirt",
+    "size": "XL",
+    "color": "yellow",
+    "price": 22,
+    "availableQty": 80,
+    "slug": "golden-gleam"
+  },
+  {
+    "title": "Lavender Lush",
+    "description": "Experience everyday luxury with our Classic Comfort Tee. Crafted from a premium cotton blend, this T-shirt offers a soft touch and a flattering fit. Whether you're out for a casual stroll or a weekend hangout, it's the staple piece every wardrobe needs. Simple, stylish, and timeless.",
+    "img": "pic.webp",
+    "category": "Tshirt",
+    "size": "XS",
+    "color": "purple",
+    "price": 19,
+    "availableQty": 70,
+    "slug": "lavender-lush"
+  },
+  {
+    "title": "Tangerine Tango",
+    "description": "Experience everyday luxury with our Classic Comfort Tee. Crafted from a premium cotton blend, this T-shirt offers a soft touch and a flattering fit. Whether you're out for a casual stroll or a weekend hangout, it's the staple piece every wardrobe needs. Simple, stylish, and timeless.",
+    "img": "picc.webp",
+    "category": "Tshirt",
+    "size": "M",
+    "color": "orange",
+    "price": 20,
+    "availableQty": 60,
+    "slug": "tangerine-tango"
+  },
+  {
+    "title": "Ebony Elegance",
+    "description": "Experience everyday luxury with our Classic Comfort Tee. Crafted from a premium cotton blend, this T-shirt offers a soft touch and a flattering fit. Whether you're out for a casual stroll or a weekend hangout, it's the staple piece every wardrobe needs. Simple, stylish, and timeless.",
+    "img": "tshirt.webp",
+    "category": "Tshirt",
+    "size": "L",
+    "color": "black",
+    "price": 24,
+    "availableQty": 50,
+    "slug": "ebony-elegance"
+  },
+  {
+    "title": "Alabaster Appeal",
+    "description": "Experience everyday luxury with our Classic Comfort Tee. Crafted from a premium cotton blend, this T-shirt offers a soft touch and a flattering fit. Whether you're out for a casual stroll or a weekend hangout, it's the staple piece every wardrobe needs. Simple, stylish, and timeless.",
+    "img": "pic.webp",
+    "category": "Tshirt",
+    "size": "S",
+    "color": "white",
+    "price": 18,
+    "availableQty": 40,
+    "slug": "alabaster-appeal"
+  },
+  {
+    "title": "Roseate Rave",
+    "description": "Experience everyday luxury with our Classic Comfort Tee. Crafted from a premium cotton blend, this T-shirt offers a soft touch and a flattering fit. Whether you're out for a casual stroll or a weekend hangout, it's the staple piece every wardrobe needs. Simple, stylish, and timeless.",
+    "img": "picc.webp",
+    "category": "Tshirt",
+    "size": "XL",
+    "color": "pink",
+    "price": 23,
+    "availableQty": 30,
+    "slug": "roseate-rave"
+  },
+  {
+    "title": "Bronzed Brilliance",
+    "description": "Experience everyday luxury with our Classic Comfort Tee. Crafted from a premium cotton blend, this T-shirt offers a soft touch and a flattering fit. Whether you're out for a casual stroll or a weekend hangout, it's the staple piece every wardrobe needs. Simple, stylish, and timeless.",
+    "img": "picc.webp",
+    "category": "Tshirt",
+    "size": "M",
+    "color": "brown",
+    "price": 21,
+    "availableQty": 20,
+    "slug": "bronzed-brilliance"
+  },
+  {
+    "title": "Code Logic Mug",
+    "description": "Unleash your inner coder with every sip from our Programming Brewed Mug Collection! These mugs, made from premium ceramic, feature iconic code structures and logic that every developer is familiar with. Perfect for those debugging sessions or when you're optimizing your algorithms over a cup of coffee. Every sip is a reminder of the joy of coding. Code, debug, sip, repeat!",
+    "img": "mugs.jpg",
+    "category": "mugs",
+    "price": 10,
+    "availableQty": 200,
+    "slug": "code-logic-mug"
+  },
+  {
+    "title": "Binary Bliss Mug",
+    "description": "Unleash your inner coder with every sip from our Programming Brewed Mug Collection! These mugs, made from premium ceramic, feature iconic code structures and logic that every developer is familiar with. Perfect for those debugging sessions or when you're optimizing your algorithms over a cup of coffee. Every sip is a reminder of the joy of coding. Code, debug, sip, repeat!",
+    "img": "amug.jpeg",
+    "category": "mugs",
+    "price": 11,
+    "availableQty": 190,
+    "slug": "binary-bliss-mug"
+  },
+  {
+    "title": "Syntax Highlighter Mug",
+    "description": "Unleash your inner coder with every sip from our Programming Brewed Mug Collection! These mugs, made from premium ceramic, feature iconic code structures and logic that every developer is familiar with. Perfect for those debugging sessions or when you're optimizing your algorithms over a cup of coffee. Every sip is a reminder of the joy of coding. Code, debug, sip, repeat!",
+    "img": "mugs.jpg",
+    "category": "mugs",
+    "price": 10,
+    "availableQty": 185,
+    "slug": "syntax-highlighter-mug"
+  },
+  {
+    "title": "Function Fuel Mug",
+    "description": "Unleash your inner coder with every sip from our Programming Brewed Mug Collection! These mugs, made from premium ceramic, feature iconic code structures and logic that every developer is familiar with. Perfect for those debugging sessions or when you're optimizing your algorithms over a cup of coffee. Every sip is a reminder of the joy of coding. Code, debug, sip, repeat!",
+    "img": "cmug.jpg",
+    "category": "mugs",
+    "price": 12,
+    "availableQty": 180,
+    "slug": "function-fuel-mug"
+  },
+  {
+    "title": "Recursive Relaxation Mug",
+    "description": "Unleash your inner coder with every sip from our Programming Brewed Mug Collection! These mugs, made from premium ceramic, feature iconic code structures and logic that every developer is familiar with. Perfect for those debugging sessions or when you're optimizing your algorithms over a cup of coffee. Every sip is a reminder of the joy of coding. Code, debug, sip, repeat!",
+    "img": "amug.jpeg",
+    "category": "mugs",
+    "price": 13,
+    "availableQty": 175,
+    "slug": "recursive-relaxation-mug"
+  },
+  {
+    "title": "Debugger's Delight Mug",
+    "description": "Unleash your inner coder with every sip from our Programming Brewed Mug Collection! These mugs, made from premium ceramic, feature iconic code structures and logic that every developer is familiar with. Perfect for those debugging sessions or when you're optimizing your algorithms over a cup of coffee. Every sip is a reminder of the joy of coding. Code, debug, sip, repeat!",
+    "img": "mmug.webp",
+    "category": "mugs",
+    "price": 14,
+    "availableQty": 170,
+    "slug": "debuggers-delight-mug"
+  },
+  {
+    "title": "Array of Aromas Mug",
+    "description": "Unleash your inner coder with every sip from our Programming Brewed Mug Collection! These mugs, made from premium ceramic, feature iconic code structures and logic that every developer is familiar with. Perfect for those debugging sessions or when you're optimizing your algorithms over a cup of coffee. Every sip is a reminder of the joy of coding. Code, debug, sip, repeat!",
+    "img": "x.webp",
+    "category": "mugs",
+    "price": 10,
+    "availableQty": 165,
+    "slug": "array-of-aromas-mug"
+  },
+  {
+    "title": "Loop of Lattes Mug",
+    "description": "Unleash your inner coder with every sip from our Programming Brewed Mug Collection! These mugs, made from premium ceramic, feature iconic code structures and logic that every developer is familiar with. Perfect for those debugging sessions or when you're optimizing your algorithms over a cup of coffee. Every sip is a reminder of the joy of coding. Code, debug, sip, repeat!",
+    "img": "cmug.jpg",
+    "category": "mugs",
+    "price": 11,
+    "availableQty": 160,
+    "slug": "loop-of-lattes-mug"
+  },
+  {
+    "title": "Garbage Collector's Goblet Mug",
+    "description": "Unleash your inner coder with every sip from our Programming Brewed Mug Collection! These mugs, made from premium ceramic, feature iconic code structures and logic that every developer is familiar with. Perfect for those debugging sessions or when you're optimizing your algorithms over a cup of coffee. Every sip is a reminder of the joy of coding. Code, debug, sip, repeat!",
+    "img": "x.webp",
+    "category": "mugs",
+    "price": 12,
+    "availableQty": 155,
+    "slug": "garbage-collectors-goblet-mug"
+  },
+  {
+    "title": "Bitwise Brew Mug",
+    "description": "Unleash your inner coder with every sip from our Programming Brewed Mug Collection! These mugs, made from premium ceramic, feature iconic code structures and logic that every developer is familiar with. Perfect for those debugging sessions or when you're optimizing your algorithms over a cup of coffee. Every sip is a reminder of the joy of coding. Code, debug, sip, repeat!",
+    "img": "mmug.webp",
+    "category": "mugs",
+    "price": 13,
+    "availableQty": 150,
+    "slug": "bitwise-brew-mug"
+  },
+
+  {
+    "title": "Code Enthusiast Vinyl Sticker",
+    "description": "Deck out your gear with a touch of coder flair! Our Geek Chic Programming Stickers are the perfect way to showcase your tech enthusiasm. Made with high-quality vinyl, these durable stickers feature quirky programming quotes, iconic code snippets, and classic developer symbols. Whether you're sprucing up your laptop, water bottle, or notebook, these stickers will keep the coding vibes strong. Ideal for developers, programmers, and tech aficionados. Stick, code, and let your geek flag fly!",
+    "img": "s.jpeg",
+    "category": "sticker",
+    "price": 3,
+    "availableQty": 300,
+    "slug": "code-enthusiast-vinyl-sticker"
+  },
+  {
+    "title": "Dev Quirk Decal",
+    "description": "eck out your gear with a touch of coder flair! Our Geek Chic Programming Stickers are the perfect way to showcase your tech enthusiasm. Made with high-quality vinyl, these durable stickers feature quirky programming quotes, iconic code snippets, and classic developer symbols. Whether you're sprucing up your laptop, water bottle, or notebook, these stickers will keep the coding vibes strong. Ideal for developers, programmers, and tech aficionados. Stick, code, and let your geek flag fly!",
+    "img": "sticker.webp",
+    "category": "sticker",
+    "price": 2,
+    "availableQty": 290,
+    "slug": "dev-quirk-decal"
+  },
+  {
+    "title": "Classic Code Snippet Sticker",
+    "description": "eck out your gear with a touch of coder flair! Our Geek Chic Programming Stickers are the perfect way to showcase your tech enthusiasm. Made with high-quality vinyl, these durable stickers feature quirky programming quotes, iconic code snippets, and classic developer symbols. Whether you're sprucing up your laptop, water bottle, or notebook, these stickers will keep the coding vibes strong. Ideal for developers, programmers, and tech aficionados. Stick, code, and let your geek flag fly!",
+    "img": "stick.webp",
+    "category": "sticker",
+    "price": 3,
+    "availableQty": 280,
+    "slug": "classic-code-snippet-sticker"
+  },
+  {
+    "title": "Geeky Symbols Decal",
+    "description": "eck out your gear with a touch of coder flair! Our Geek Chic Programming Stickers are the perfect way to showcase your tech enthusiasm. Made with high-quality vinyl, these durable stickers feature quirky programming quotes, iconic code snippets, and classic developer symbols. Whether you're sprucing up your laptop, water bottle, or notebook, these stickers will keep the coding vibes strong. Ideal for developers, programmers, and tech aficionados. Stick, code, and let your geek flag fly!",
+    "img": "zoro.webp",
+    "category": "sticker",
+    "price": 2,
+    "availableQty": 270,
+    "slug": "geeky-symbols-decal"
+  },
+  {
+    "title": "Coder Quotes Sticker",
+    "description": "eck out your gear with a touch of coder flair! Our Geek Chic Programming Stickers are the perfect way to showcase your tech enthusiasm. Made with high-quality vinyl, these durable stickers feature quirky programming quotes, iconic code snippets, and classic developer symbols. Whether you're sprucing up your laptop, water bottle, or notebook, these stickers will keep the coding vibes strong. Ideal for developers, programmers, and tech aficionados. Stick, code, and let your geek flag fly!",
+    "img": "sticker.webp",
+    "category": "sticker",
+    "price": 3,
+    "availableQty": 260,
+    "slug": "coder-quotes-sticker"
+  },
+  {
+    "title": "Tech Enthusiasm Emblem",
+    "description": "eck out your gear with a touch of coder flair! Our Geek Chic Programming Stickers are the perfect way to showcase your tech enthusiasm. Made with high-quality vinyl, these durable stickers feature quirky programming quotes, iconic code snippets, and classic developer symbols. Whether you're sprucing up your laptop, water bottle, or notebook, these stickers will keep the coding vibes strong. Ideal for developers, programmers, and tech aficionados. Stick, code, and let your geek flag fly!",
+    "img": "zoro.webp",
+    "category": "sticker",
+    "price": 2,
+    "availableQty": 250,
+    "slug": "tech-enthusiasm-emblem"
+  },
+  {
+    "title": "Iconic Developer Decal",
+    "description": "eck out your gear with a touch of coder flair! Our Geek Chic Programming Stickers are the perfect way to showcase your tech enthusiasm. Made with high-quality vinyl, these durable stickers feature quirky programming quotes, iconic code snippets, and classic developer symbols. Whether you're sprucing up your laptop, water bottle, or notebook, these stickers will keep the coding vibes strong. Ideal for developers, programmers, and tech aficionados. Stick, code, and let your geek flag fly!",
+    "img": "s.jpeg",
+    "category": "sticker",
+    "price": 3,
+    "availableQty": 240,
+    "slug": "iconic-developer-decal"
+  },
+  {
+    "title": "Quirky Programming Badge",
+    "description": "eck out your gear with a touch of coder flair! Our Geek Chic Programming Stickers are the perfect way to showcase your tech enthusiasm. Made with high-quality vinyl, these durable stickers feature quirky programming quotes, iconic code snippets, and classic developer symbols. Whether you're sprucing up your laptop, water bottle, or notebook, these stickers will keep the coding vibes strong. Ideal for developers, programmers, and tech aficionados. Stick, code, and let your geek flag fly!",
+    "img": "stick.webp",
+    "category": "sticker",
+    "price": 2,
+    "availableQty": 230,
+    "slug": "quirky-programming-badge"
+  },
+  {
+    "title": "Developer Symbols Sticker",
+    "description": "eck out your gear with a touch of coder flair! Our Geek Chic Programming Stickers are the perfect way to showcase your tech enthusiasm. Made with high-quality vinyl, these durable stickers feature quirky programming quotes, iconic code snippets, and classic developer symbols. Whether you're sprucing up your laptop, water bottle, or notebook, these stickers will keep the coding vibes strong. Ideal for developers, programmers, and tech aficionados. Stick, code, and let your geek flag fly!",
+    "img": "s.jpeg",
+    "category": "sticker",
+    "price": 3,
+    "availableQty": 220,
+    "slug": "developer-symbols-sticker"
+  },
+  {
+    "title": "Code Vibes Decal",
+    "description": "eck out your gear with a touch of coder flair! Our Geek Chic Programming Stickers are the perfect way to showcase your tech enthusiasm. Made with high-quality vinyl, these durable stickers feature quirky programming quotes, iconic code snippets, and classic developer symbols. Whether you're sprucing up your laptop, water bottle, or notebook, these stickers will keep the coding vibes strong. Ideal for developers, programmers, and tech aficionados. Stick, code, and let your geek flag fly!",
+    "img": "sticker.webp",
+    "category": "sticker",
+    "price": 2,
+    "availableQty": 210,
+    "slug": "code-vibes-decal"
+  },
+  {
+    "title": "Urban Comfort Pullover",
+    "description": "Elevate your everyday wardrobe with our Essential Cozy Hoodie. Expertly crafted with a premium blend of materials, this hoodie promises not just style but also unmatched comfort.",
+    "img": "hoodie.jpeg",
+    "category": "hoodies",
+    "size": "L",
+    "color": "Blue",
+    "price": 40,
+    "availableQty": 50,
+    "slug": "urban-comfort-pullover"
+  },
+  {
+    "title": "Midnight Wanderer Zip-Up",
+    "description": "Elevate your everyday wardrobe with our Essential Cozy Hoodie. Expertly crafted with a premium blend of materials, this hoodie promises not just style but also unmatched comfort.",
+    "img": "hood.webp",
+    "category": "hoodies",
+    "size": "M",
+    "color": "red",
+    "price": 42,
+    "availableQty": 48,
+    "slug": "midnight-wanderer-zip-up"
+  },
+  {
+    "title": "ChillScape Kangaroo Pocket Hoodie",
+    "description": "Elevate your everyday wardrobe with our Essential Cozy Hoodie. Expertly crafted with a premium blend of materials, this hoodie promises not just style but also unmatched comfort.",
+    "img": "hoodes.jpeg",
+    "category": "hoodies",
+    "size": "S",
+    "color": "green",
+    "price": 41,
+    "availableQty": 46,
+    "slug": "chillscape-kangaroo-pocket-hoodie"
+  },
+  {
+    "title": "TechLuxe Reflective Hoodie",
+    "description": "Elevate your everyday wardrobe with our Essential Cozy Hoodie. Expertly crafted with a premium blend of materials, this hoodie promises not just style but also unmatched comfort.",
+    "img": "hoodie.jpeg",
+    "category": "hoodies",
+    "size": "XL",
+    "color": "yellow",
+    "price": 43,
+    "availableQty": 44,
+    "slug": "techluxe-reflective-hoodie"
+  },
+  {
+    "title": "EverWarm Fleece-lined Sweatshirt",
+    "description": "Elevate your everyday wardrobe with our Essential Cozy Hoodie. Expertly crafted with a premium blend of materials, this hoodie promises not just style but also unmatched comfort.",
+    "img": "hody.webp",
+    "category": "hoodies",
+    "size": "XS",
+    "color": "black",
+    "price": 39,
+    "availableQty": 42,
+    "slug": "everwarm-fleece-lined-sweatshirt"
+  },
+  {
+    "title": "RetroWave Graphic Hoodie",
+    "description": "Elevate your everyday wardrobe with our Essential Cozy Hoodie. Expertly crafted with a premium blend of materials, this hoodie promises not just style but also unmatched comfort.",
+    "img": "hood.webp",
+    "category": "hoodies",
+    "size": "M",
+    "color": "white",
+    "price": 40,
+    "availableQty": 40,
+    "slug": "retrowave-graphic-hoodie"
+  },
+  {
+    "title": "EcoBlend Organic Cotton Hoodie",
+    "description": "Elevate your everyday wardrobe with our Essential Cozy Hoodie. Expertly crafted with a premium blend of materials, this hoodie promises not just style but also unmatched comfort.",
+    "img": "hoodie.jpeg",
+    "category": "hoodies",
+    "size": "L",
+    "color": "orange",
+    "price": 42,
+    "availableQty": 38,
+    "slug": "ecoblend-organic-cotton-hoodie"
+  },
+  {
+    "title": "MistyMorn Thermal Hoodie",
+    "description": "Elevate your everyday wardrobe with our Essential Cozy Hoodie. Expertly crafted with a premium blend of materials, this hoodie promises not just style but also unmatched comfort.",
+    "img": "hood.webp",
+    "category": "hoodies",
+    "size": "S",
+    "color": "pink",
+    "price": 41,
+    "availableQty": 36,
+    "slug": "mistymorn-thermal-hoodie"
+  },
+  {
+    "title": "StreetSavvy Sleeve-Stripe Pullover",
+    "description": "Elevate your everyday wardrobe with our Essential Cozy Hoodie. Expertly crafted with a premium blend of materials, this hoodie promises not just style but also unmatched comfort.",
+    "img": "hoodes.jpeg",
+    "category": "hoodies",
+    "size": "XL",
+    "color": "purple",
+    "price": 43,
+    "availableQty": 34,
+    "slug": "streetsavvy-sleeve-stripe-pullover"
+  },
+  {
+    "title": "PeakFit Athletic Performance Hoodie",
+    "description": "Elevate your everyday wardrobe with our Essential Cozy Hoodie. Expertly crafted with a premium blend of materials, this hoodie promises not just style but also unmatched comfort.",
+    "img": "hody.webp",
+    "category": "hoodies",
+    "size": "M",
+    "color": "brown",
+    "price": 40,
+    "availableQty": 32,
+    "slug": "peakfit-athletic-performance-hoodie"
+  }
+]
