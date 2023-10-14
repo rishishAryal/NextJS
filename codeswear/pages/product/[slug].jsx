@@ -30,7 +30,7 @@ const Slug = ({ addToCart, product, variants, buyNow }) => {
       });
     } else {
       setServiceable(false);
-      toast.error('Your pin code is not servicable', {
+      toast.error("Your pin code is not servicable", {
         position: "top-right",
         autoClose: 500,
         hideProgressBar: false,
@@ -39,7 +39,7 @@ const Slug = ({ addToCart, product, variants, buyNow }) => {
         draggable: true,
         progress: undefined,
         theme: "light",
-        });
+      });
     }
   };
   const [color, setColor] = useState(product.color);
@@ -93,7 +93,9 @@ const Slug = ({ addToCart, product, variants, buyNow }) => {
                 {`${product.size} / ${
                   product.color.charAt(0).toUpperCase() + product.color.slice(1)
                 }`}
-                ) - {product.category.charAt(0).toUpperCase()+ product.category.slice(1)}
+                ) -{" "}
+                {product.category.charAt(0).toUpperCase() +
+                  product.category.slice(1)}
               </h1>
               <div className="flex mb-4"></div>
               <p className="leading-relaxed px-4">{product.description}</p>
@@ -250,7 +252,7 @@ const Slug = ({ addToCart, product, variants, buyNow }) => {
                             setColor(currentColor);
                             refreshVariants(size, currentColor);
                           }}
-                          className={`border-2 bg-${currentColor}-500 rounded-full w-6 h-6 focus:outline-none ${
+                          className={`border-2 bg-${currentColor}-500  bg-${currentColor} rounded-full w-6 h-6 focus:outline-none ${
                             color === currentColor
                               ? "border-black"
                               : "border-gray-500"
@@ -315,7 +317,7 @@ const Slug = ({ addToCart, product, variants, buyNow }) => {
                       size,
                       color
                     );
-                    toast.success('Item added Successfully', {
+                    toast.success("Item added Successfully", {
                       position: "top-right",
                       autoClose: 500,
                       hideProgressBar: false,
@@ -324,7 +326,7 @@ const Slug = ({ addToCart, product, variants, buyNow }) => {
                       draggable: true,
                       progress: undefined,
                       theme: "light",
-                      });
+                    });
                   }}
                   className="flex text-sm ml-4 md:ml-16 text-white bg-pink-500 border-0 py-2 px-2 lg:px-6 focus:outline-none hover:bg-pink-600 rounded"
                 >
@@ -416,7 +418,11 @@ export const getServerSideProps = async (context) => {
 
   try {
     let product = await Product.findOne({ slug: context.query.slug });
-    let variants = await Product.find({ title: product.title });
+    let variants = await Product.find({
+      title: product.title,
+      category: product.category,
+    });
+    
     let colorSizeSlug = {};
     for (let item of variants) {
       if (Object.keys(colorSizeSlug).includes(item.color)) {
