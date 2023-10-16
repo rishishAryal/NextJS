@@ -5,29 +5,35 @@ async function handler(req, res) {
   if (req.method !== "POST") {
     return res.status(405).json({ message: "Method not allowed" });
   }
+  res.setHeader("Content-Type", "application/json");
+
   try {
-    const email = req.body.email;
+    const { email, password } = req.body;
+    console.log(email, password);
     const checkUser = await User.findOne({ email: email });
 
     if (!checkUser) {
-      res.status(400).json({
+      res.json({
         success: false,
-        message: "The user with this email does not exist",
+        message: "User not found",
       });
     }
-    if (checkUser.password !== req.body.password) {
-      res
-        .status(401)
-        .json({ success: false, message: "Password is incorrect" });
+    if (checkUser.password !== password) {
+      res.json({
+        success: false,
+        message: "Wrong Credentials",
+      });
     }
-    if (checkUser.password === req.body.password) {
-      res
-        .status(200)
-        .json({ success: true, message: "Logged in successfully" });
+    if (checkUser.password === password) {
+      res.status(200).json({
+        success: true,
+        message: "Logged in successfully",
+        user: checkUser,
+      });
     }
   } catch (e) {
     res.json({ message: "Some error occured" });
   }
-}   
+}
 
 export default connectDB(handler);

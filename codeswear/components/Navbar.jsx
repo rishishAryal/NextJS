@@ -13,7 +13,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
-  console.log(cart);
+ 
   const toogleCart = () => {
     const classList = ref.current.classList;
     if (classList.contains("translate-x-full")) {
