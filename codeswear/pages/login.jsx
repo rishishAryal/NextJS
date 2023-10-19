@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import axios from "axios";
+import { useRouter } from "next/router";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import forgotPassword from "./forgotPassword";
 const login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  const Router = useRouter();
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -53,7 +54,10 @@ const login = () => {
           draggable: true,
           progress: undefined,
           theme: "light",
-        });  
+        });
+        setTimeout(() => {
+          Router.push("/");
+        }, 2000);
       }
     } catch (err) {
       console.error(err);
