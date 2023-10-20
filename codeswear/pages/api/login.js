@@ -1,6 +1,8 @@
 import User from "@/models/User";
 import connectDB from "@/middleware/mongoose";
 const CryptoJS = require("crypto-js");
+var jwt = require("jsonwebtoken");
+
 async function handler(req, res) {
   if (req.method !== "POST") {
     return res.status(405).json({ message: "Method not allowed" });
@@ -32,11 +34,17 @@ async function handler(req, res) {
         CryptoJS.enc.Utf8
       ) === password
     ) {
-      res.status(200).json({
-        success: true,
+      const token = jwt.sign(
+        {
+          success: true,
+          message: "Logged in successfully",
+          user: checkUser,
+        },
+        "jwtsecret"
+      );
+      res.status(200).json({ token,success: true,
         message: "Logged in successfully",
-        user: checkUser,
-      });
+        user: checkUser, });
     }
   } catch (e) {
     res.json({ message: "Some error occured" });

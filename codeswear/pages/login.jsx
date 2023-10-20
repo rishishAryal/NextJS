@@ -18,7 +18,7 @@ const login = () => {
     try {
       const res = await axios.post("http://localhost:3000/api/login", dat);
       const data = res.data; // No need to await res.data
-      console.log(data);
+      console.log(data.success);
 
       if (data.message === "User not found" && data.success === false) {
         toast.error(`${data.message}`, {
