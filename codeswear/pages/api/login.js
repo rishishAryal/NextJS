@@ -50,5 +50,5 @@ async function handler(req, res) {
     res.json({ message: "Some error occured" });
   }
 }
-
+ 
 export default connectDB(handler);
