@@ -1,19 +1,50 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import {
   AiOutlineShoppingCart,
   AiFillCloseCircle,
   AiFillPlusCircle,
   AiFillMinusCircle,
+  AiOutlineLogin,
 } from "react-icons/ai";
 import { MdAccountCircle } from "react-icons/md";
-import { BsFillBagFill } from "react-icons/bs";
+import { BsFillBagFill, BsListNested } from "react-icons/bs";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
- 
+  const [jwtToken, setJwtToken] = useState();
+  const Router = useRouter();
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      // Perform localStorage action
+      setJwtToken(localStorage.getItem("token"));
+    }
+  });
+  const logout = () => {
+    if (typeof window !== "undefined") {
+      // Perform localStorage action
+      if (localStorage.getItem("token")) {
+        localStorage.removeItem("token");
+      }
+      toast.success("Logged Out", {
+        position: "top-left",
+        autoClose: 500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+      setTimeout(() => {
+        Router.push("/");
+      }, 2000);
+    }
+  };
   const toogleCart = () => {
     const classList = ref.current.classList;
     if (classList.contains("translate-x-full")) {
@@ -28,16 +59,32 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
   const ref = useRef();
   return (
     <div className="flex shadow-md  mt-1 flex-col md:flex-row md:justify-start  justify-center items-center sticky top-0 bg-white z-10">
-      <div className="logo">
-        <Link href={"/"}>
-          <Image
-            src="/logo.png"
-            className="mx-5"
-            width={300}
-            height={40}
-            alt="logo"
-          />
-        </Link>
+      <ToastContainer
+        position="top-right"
+        autoClose={1000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
+      {/* Same as */}
+      <ToastContainer />
+      <div className="logo  ">
+        
+          <Link href={"/"} className="">
+            <Image
+              src="/logo.png"
+              className=" mr-[200px] md:mr-0"
+              width={300}
+              height={40}
+              alt="logo"
+            />
+          </Link>
+       
       </div>
       <div className="nav">
         <ul className="flex space-x-5 text-black font-bold text-xl  items-center">
@@ -69,9 +116,22 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
       </div>
 
       <div className="cart absolute gap-1 right-0 mx-5 top-5 flex justify-center items-center">
-        <Link href={"/login"}>
-          <MdAccountCircle className="text-3xl cursor-pointer text-pink-500 hover:text-pink-600"></MdAccountCircle>
-        </Link>
+        {!jwtToken ? (
+          <Link href={"/login"}>
+            <button className="text-white bg-pink-500 hover:bg-600-pink cursor-pointer  px-2 py-1 rounded">
+              Login
+            </button>
+          </Link>
+        ) : (
+          <button
+            onClick={() => {
+              logout();
+            }}
+            className="  text-white bg-pink-500 hover:bg-600-pink cursor-pointer  px-2 py-1 rounded"
+          >
+            Logout
+          </button>
+        )}
 
         <AiOutlineShoppingCart
           onClick={toogleCart}
@@ -135,7 +195,6 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
         </ol>
         {Object.keys(cart).length > 0 && (
           <div className="flex  gap-3 mt-2 items-center ">
-            
             <button
               onClick={() => {
                 clearCart();

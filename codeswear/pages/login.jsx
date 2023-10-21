@@ -45,6 +45,7 @@ const login = () => {
         });
       }
       if (data.success === true) {
+        localStorage.setItem("token", data.token);
         toast.success(`${data.message}`, {
           position: "top-right",
           autoClose: 1000,

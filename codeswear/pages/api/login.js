@@ -40,15 +40,21 @@ async function handler(req, res) {
           message: "Logged in successfully",
           user: checkUser,
         },
-        "jwtsecret"
+        "jwtsecret",
+        { expiresIn: "2d" }
       );
-      res.status(200).json({ token,success: true,
-        message: "Logged in successfully",
-        user: checkUser, });
+      res
+        .status(200)
+        .json({
+          token,
+          success: true,
+          message: "Logged in successfully",
+          user: checkUser,
+        });
     }
   } catch (e) {
     res.json({ message: "Some error occured" });
   }
 }
- 
+
 export default connectDB(handler);
