@@ -93,7 +93,7 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
             className="p-[5.5px]    hover:text-gray-50 hover:bg-pink-500 transition-all  rounded-sm"
           >
             <li>Tshirt</li>
-          </Link>
+          </Link>   
           <Link
             href={"/hoodies"}
             className="p-[5.5px]  rounded-sm  hover:text-gray-50 hover:bg-pink-500 transition-all"
