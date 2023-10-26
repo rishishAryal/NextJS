@@ -84,7 +84,7 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
               alt="logo"
             />
           </Link>
-           
+              
       </div>
       <div className="nav">
         <ul className="flex space-x-5 text-black font-bold text-xl  items-center">
