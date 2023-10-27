@@ -99,7 +99,7 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
             className="p-[5.5px]  rounded-sm  hover:text-gray-50 hover:bg-pink-500 transition-all"
           >
             <li>Hoddie</li>
-          </Link>
+          </Link>   
           <Link  
             href={"/mugs"} 
             className="p-[5.5px]  rounded-sm hover:text-gray-50 hover:bg-pink-500 transition-all"
