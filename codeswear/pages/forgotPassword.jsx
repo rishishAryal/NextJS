@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
+
 const forgotPassword = () => {
+  const Router = useRouter();
+  useEffect(() => {
+    if (localStorage.getItem("token")) {
+      Router.push("/");
+    }
+  }, []);
   return (
     <div>
       <div class="min-h-screen  bg-blue-50 py-6 flex flex-col justify-center sm:py-12">
@@ -10,7 +18,7 @@ const forgotPassword = () => {
             <div class="max-w-md mx-auto">
               <div>
                 <h1 class="text-2xl text-center font-semibold">
-                 Forget Password
+                  Forget Password
                 </h1>
 
                 <p className="text-center  mt-1 ">
@@ -23,7 +31,6 @@ const forgotPassword = () => {
               </div>
               <div class="divide-y divide-gray-200">
                 <div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
-                
                   <div class="relative">
                     <input
                       autocomplete="off"
@@ -40,11 +47,10 @@ const forgotPassword = () => {
                       Email Address
                     </label>
                   </div>
-                  
 
                   <div class="relative">
                     <button class="bg-pink-500 hover:bg-pink-600 text-white rounded-md px-5 py-1">
-                     Continue
+                      Continue
                     </button>
                   </div>
                 </div>

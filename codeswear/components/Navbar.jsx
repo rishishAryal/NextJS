@@ -14,36 +14,21 @@ import { BsFillBagFill, BsListNested } from "react-icons/bs";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
-  const [jwtToken, setJwtToken] = useState();
+const Navbar = ({
+  Logout,
+  user,
+  cart,
+  addToCart,
+  removeFromCart,
+  clearCart,
+  subTotal,
+}) => {
+  // const [jwtToken, setJwtToken] = useState();
   const Router = useRouter();
+  const [dropdown, setDropdown] = useState(false);
 
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      // Perform localStorage action
-      setJwtToken(localStorage.getItem("token"));
-    }
-  });
-  const logout = () => {
-    if (typeof window !== "undefined") {
-      // Perform localStorage action
-      if (localStorage.getItem("token")) {
-        localStorage.removeItem("token");
-      }
-      toast.success("Logged Out", {
-        position: "top-left",
-        autoClose: 500,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
-      setTimeout(() => {
-        Router.push("/");
-      }, 2000);
-    }
+  const toggleDropdown = () => {
+    setDropdown(!dropdown);
   };
   const toogleCart = () => {
     const classList = ref.current.classList;
@@ -58,7 +43,7 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
 
   const ref = useRef();
   return (
-    <div className="flex shadow-md  mt-1 flex-col md:flex-row md:justify-start  justify-center items-center sticky top-0 bg-white z-10">
+    <div className="flex shadow-md  mt-1 flex-col md:flex-row md:justify-start  justify-center items-center sticky top-0 bg-white  z-10">
       <ToastContainer
         position="top-right"
         autoClose={1000}
@@ -74,17 +59,15 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
       {/* Same as */}
       <ToastContainer />
       <div className="logo  ">
-        
-          <Link href={"/"} className="">
-            <Image
-              src="/logo.png"
-              className=" mr-[200px] md:mr-0"
-              width={300}
-              height={40}
-              alt="logo"
-            />
-          </Link>
-              
+        <Link href={"/"} className="">
+          <Image
+            src="/logo.png"
+            className=" mr-[200px] md:mr-0"
+            width={300}
+            height={40}
+            alt="logo"
+          />
+        </Link>
       </div>
       <div className="nav">
         <ul className="flex space-x-5 text-black font-bold text-xl  items-center">
@@ -93,15 +76,15 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
             className="p-[5.5px]    hover:text-gray-50 hover:bg-pink-500 transition-all  rounded-sm"
           >
             <li>Tshirt</li>
-          </Link>   
+          </Link>
           <Link
             href={"/hoodies"}
             className="p-[5.5px]  rounded-sm  hover:text-gray-50 hover:bg-pink-500 transition-all"
           >
             <li>Hoddie</li>
-          </Link>   
-          <Link  
-            href={"/mugs"} 
+          </Link>
+          <Link
+            href={"/mugs"}
             className="p-[5.5px]  rounded-sm hover:text-gray-50 hover:bg-pink-500 transition-all"
           >
             <li>Mugs</li>
@@ -115,22 +98,34 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
         </ul>
       </div>
 
-      <div className="cart absolute gap-1 right-0 mx-5 top-5 flex justify-center items-center">
-        {!jwtToken ? (
-          <Link href={"/login"}>
-            <button className="text-white bg-pink-500 hover:bg-600-pink cursor-pointer  px-2 py-1 rounded">
-              Login
-            </button>
-          </Link>
+      <div className="cart absolute gap-1 rounded-md  right-0 mx-5 top-5 flex justify-center items-center">
+        {dropdown && (
+          <div className="absolute shadow-lg rounded-md text-sm right-14 top-10">
+            <div className="bg-pink-200 w-40 text-center cursor-pointer  rounded-md   text-gray-700 font-semibold">
+              <p className=" py-1  cursor-pointer hover:text-pink-600 shadow-sm">
+               <Link href={"/account"}>My Account</Link> 
+              </p>
+            <p className=" py-1 hover:text-pink-600
+              
+              shadow-sm   cursor-pointer">
+                <Link href={"/order"}>Order</Link> 
+              </p>
+              <p onClick={Logout} className="  py-1 cursor-pointer hover:text-pink-600">Logout</p>
+            </div>
+          </div>
+        )}
+        {user.value && user.value !== null ? (
+          <MdAccountCircle
+            onClick={toggleDropdown}
+            className="text-3xl  cursor-pointer text-pink-500 hover:text-pink-600"
+          ></MdAccountCircle>
         ) : (
-          <button
-            onClick={() => {
-              logout();
-            }}
-            className="  text-white bg-pink-500 hover:bg-600-pink cursor-pointer  px-2 py-1 rounded"
+          <Link
+            href={"/login"}
+            className="cursor-pointer bg-pink-600 px-2 py-1 rounded-md text-white"
           >
-            Logout
-          </button>
+            Login
+          </Link>
         )}
 
         <AiOutlineShoppingCart

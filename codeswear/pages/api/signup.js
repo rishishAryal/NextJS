@@ -1,6 +1,7 @@
 import User from "@/models/User";
 import connectDB from "@/middleware/mongoose";
 const CryptoJS = require("crypto-js");
+var jwt = require("jsonwebtoken");
 async function handler(req, res) {
   if (req.method !== "POST") {
     return res.status(405).json({ message: "Method not allowed" });
@@ -16,8 +17,8 @@ async function handler(req, res) {
   const existingUser = await User.findOne({ email });
   if (existingUser) {
     return res
-      .status(422)
-      .json({ message: "User with this email already exists" });
+      .status(409)
+      .json({ message: "User with this email already exists",success:false });
   }
 
   const user = await User.create({
@@ -25,7 +26,23 @@ async function handler(req, res) {
     email,
     password: CryptoJS.AES.encrypt(password, "secret123").toString(),
   });
-  return res.status(201).json({ message: "User created", success: true });
+
+  const token = jwt.sign(
+    {
+      success: true,
+      message: "Your account has been created",
+      user: user,
+    },
+    "jwtsecret",
+    { expiresIn: "2d" }
+  );
+
+  return res.status(200).json({
+    token,
+    success: true,
+    message: "Your account has been created",
+    user: user,
+  });
 }
 
 export default connectDB(handler);

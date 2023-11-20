@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import axios from "axios";
 import { useRouter } from "next/router";
@@ -9,6 +9,11 @@ const login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const Router = useRouter();
+  useEffect (()=>{
+  if(localStorage.getItem('token')){
+    Router.push('/')
+  }
+  },[])
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -18,7 +23,7 @@ const login = () => {
     try {
       const res = await axios.post("http://localhost:3000/api/login", dat);
       const data = res.data; // No need to await res.data
-      console.log(data.success);
+      
 
       if (data.message === "User not found" && data.success === false) {
         toast.error(`${data.message}`, {
@@ -57,7 +62,7 @@ const login = () => {
           theme: "light",
         });
         setTimeout(() => {
-          Router.push("/");
+          Router.push("/").then(() => window.location.reload());
         }, 2000);
       }
     } catch (err) {

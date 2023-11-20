@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
 import Link from "next/link";
 import axios from "axios";
+import { useRouter } from "next/router";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 const Signup = () => {
@@ -8,7 +10,13 @@ const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setpassword] = useState("");
   const [created, setCreated] = useState();
+  const Router = useRouter();
 
+  useEffect(() => {
+    if (localStorage.getItem("token")) {
+      Router.push("/");
+    }
+  }, []);
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -17,17 +25,40 @@ const Signup = () => {
         email: email,
         password: password,
       });
+
       const data = await res.data;
-      toast.success("Your account is created", {
-        position: "top-right",
-        autoClose: 1000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
+      console.log(data);
+      if (
+        data.success === true &&
+        data.message === "Your account has been created"
+      ) {
+        localStorage.setItem("token", data.token);
+        toast.success(`${data.message}`, {
+          position: "top-right",
+          autoClose: 1000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+      }
+      if (
+        data.success === false &&
+        data.message === "User with this email already exists"
+      ) {
+        toast.error(`${data.message}`, {
+          position: "top-right",
+          autoClose: 1000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+      }
     } catch (err) {
       toast.error("something went wrong", {
         position: "top-right",
