@@ -103,12 +103,12 @@ const Navbar = ({
           <div className="absolute shadow-lg rounded-md text-sm right-14 top-10">
             <div className="bg-pink-200 w-40 text-center cursor-pointer  rounded-md   text-gray-700 font-semibold">
               <p className=" py-1  cursor-pointer hover:text-pink-600 shadow-sm">
-               <Link href={"/account"}>My Account</Link> 
+               <Link href={"/myaccount"}>My Account</Link> 
               </p>
             <p className=" py-1 hover:text-pink-600
               
               shadow-sm   cursor-pointer">
-                <Link href={"/order"}>Order</Link> 
+                <Link href={"/orders"}>Order</Link> 
               </p>
               <p onClick={Logout} className="  py-1 cursor-pointer hover:text-pink-600">Logout</p>
             </div>
